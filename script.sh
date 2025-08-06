@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-if [ ! -f ~/devops-dashboard/docs/index.html ]; then
-	if [ ! -d ~/devops-dashboard/docs ]; then
-		mkdir ~/devops-dashboard/docs
+if [ ! -f "docs/index.html" ]; then
+	if [ ! -d "docs" ]; then
+		mkdir "docs"
 	fi
-	touch ~/devops-dashboard/docs/index.html
+	touch "docs/index.html"
 fi
 
-echo "<h1>Devops Dashboard</h1>" > ~/devops-dashboard/docs/index.html
+echo "<h1>Devops Dashboard</h1>" > "docs/index.html"
 
 add_to_file() {
-	echo "<p>$1</p>" >> ~/devops-dashboard/docs/index.html
+	echo "<p>$1</p>" >> "docs/index.html"
 }
 
 host=$(hostname)
